@@ -6,8 +6,9 @@ speaker-notes strip (`N` key), step-synced.
 ## Act I: The Empty Lot
 
 ### 1. Title
-- Welcome. I am Roman Gurevitch, Principal Software Engineer at Mantel.
-- Tonight we build a factory, live, piece by piece.
+- Welcome. I am Jason Feng, Principal Software Engineer and Consultant at
+  Mantel.
+- Today we build a factory, live, piece by piece.
 - You leave with a complete parts list for agentic engineering, and a way to
   decide how much of it your org needs.
 
@@ -269,5 +270,6 @@ speaker-notes strip (`N` key), step-synced.
   deliberate depth, even if the decision is one file.
 - And compose your Meta Workflow on purpose. Decide how your teams’ workflows
   are built instead of letting them grow by accident.
-- Thank you. I am Roman Gurevitch, Principal Software Engineer at Mantel. The
-  QR code on the card goes to my LinkedIn; scan it and connect. Questions.
+- Thank you. I am Jason Feng, Principal Software Engineer and Consultant at
+  Mantel. The QR code on the card goes to my LinkedIn; scan it and connect.
+  Questions.

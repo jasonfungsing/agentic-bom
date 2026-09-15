@@ -1,7 +1,8 @@
 # BOM for Agentic Engineering: Presentation Site Design
 
 Talk: "BOM for Agentic Engineering" (30-40 min, external conference audience)
-Speaker: Roman Gurevitch, Principal Software Engineer, Mantel
+Speaker: Jason Feng, Principal Software Engineer / Consultant, Mantel
+Original talk, metaphor and deck: Roman Gurevitch, Principal Software Engineer, Mantel
 
 ## Concept
 
