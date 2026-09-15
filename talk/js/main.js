@@ -265,13 +265,12 @@ function updateHud(step) {
   $('kicker').textContent = step.kicker;
   $('title').textContent = step.title;
   $('bullets').innerHTML = step.bullets.map(b => `<li>${b}</li>`).join('');
-  // each step carries its own QR panel: { img, title, url }
-  $('qr').style.display = step.qr ? 'flex' : 'none';
-  if (step.qr) {
-    $('qrimg').src = step.qr.img;
-    $('qrtitle').textContent = step.qr.title;
-    $('qrurl').textContent = step.qr.url;
-  }
+  // a step may carry QR panels, one or several: { img, title, url } or an
+  // array of them. They render in their own box at the bottom right.
+  const qrs = step.qr ? [].concat(step.qr) : [];
+  $('qrbox').style.display = qrs.length ? 'flex' : 'none';
+  $('qrbox').innerHTML = qrs.map(q =>
+    `<div class="qr-item"><img src="${q.img}" alt="QR code" /><div class="qr-t">${q.title}</div><div class="qr-u mono">${q.url}</div></div>`).join('');
   $('stepnum').textContent = `${String(screenNo()).padStart(2, '0')} / ${STEPS.length}`;
 
   const dots = STEPS.map((s, i) =>
