@@ -1378,7 +1378,7 @@ export function buildWorld(scene) {
   const signLabel = makeLabel('BOM for Agentic Engineering', css(COLORS.know), 2.1);
   signLabel.position.set(0, -2.1, -5.8);
   sign.add(signLabel);
-  const signSub = makeLabel('Roman Gurevitch  ·  Principal Software Engineer  ·  Mantel', css(COLORS.infra), 1.05);
+  const signSub = makeLabel('Jason Feng  ·  Principal Software Engineer / Consultant  ·  Mantel', css(COLORS.infra), 0.93);
   signSub.position.set(0, -5.6, -5.8);
   sign.add(signSub);
   animators.push({

@@ -20,7 +20,7 @@ export const STEPS = [
   {
     act: 1, accent: C.know, kicker: 'Welcome',
     title: 'We are going to build a factory',
-    qr: { img: 'assets/qr.svg', title: 'Scan for the repo & deck', url: 'github.com/romangurevitch/agentic-bom' },
+    qr: { img: 'assets/qr.svg', title: 'Scan for the repo & deck', url: 'github.com/jasonfungsing/agentic-bom' },
     bullets: [
       'A Bill of Materials for agentic engineering, assembled live',
       'You leave with a parts list to hold your own org against',
@@ -384,17 +384,18 @@ export const STEPS = [
   {
     act: 6, accent: C.outcome, kicker: 'Close',
     title: 'Build your own factory',
-    qr: { img: 'assets/qr-linkedin.svg', title: 'Connect on LinkedIn', url: 'linkedin.com/in/roman-gurevitch-781220aa' },
+    qr: { img: 'assets/qr-linkedin.svg', title: 'Connect on LinkedIn', url: 'linkedin.com/in/jasonfungsing' },
     bullets: [
       'Adopting tools is not building a factory. The factory is how your org delivers software, rebuilt around agents.',
       'Take the parts list home and hold your org against it: every component gets a deliberate depth, even if that depth is "one file"',
       'Compose your Meta Workflow on purpose: assembled, versioned, owned, never an accident',
-      'Roman Gurevitch · Principal Software Engineer · Mantel',
+      'Jason Feng · Principal Software Engineer / Consultant · Mantel',
     ],
     notes: [
       'The talk opened on an empty lot with "we are going to build a factory"; the close hands the job over.',
       'Hold your org against the parts list and give each component a deliberate depth, even if that depth is one file; then compose your Meta Workflow on purpose instead of letting it grow by accident.',
       'The QR goes to LinkedIn; the slide stays up through questions, and disagreement is welcome.',
+      'Credit: the talk, the factory metaphor and this 3D deck were built by Roman Gurevitch, Principal Software Engineer at Mantel (github.com/romangurevitch/agentic-bom).',
     ],
     cam: { pos: [-10, 10, 46], target: [0, 2, 20] },
   },
