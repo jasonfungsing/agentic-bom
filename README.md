@@ -1,6 +1,11 @@
 # Agentic BOM: "BOM for Agentic Engineering" Talk
 
-**Live: [romangurevitch.github.io/agentic-bom](https://romangurevitch.github.io/agentic-bom/)**
+**Live: [jasonfungsing.github.io/agentic-bom](https://jasonfungsing.github.io/agentic-bom/)**
+
+Forked from [romangurevitch/agentic-bom](https://github.com/romangurevitch/agentic-bom):
+the talk, the factory metaphor, the 3D deck and the script were built by
+Roman Gurevitch (Principal Software Engineer, Mantel). This fork carries the
+version presented by Jason Feng at GDG DevFest 2026 (Melbourne and Brisbane).
 
 > Open the live deck on a computer. The 3D factory is not supported on
 > phones.
@@ -53,7 +58,7 @@ Published as a [GitHub Pages](https://docs.github.com/en/pages) site via the
 branch triggers a deployment automatically, publishing the `talk/` directory
 with `talk/index.html` as the entry point.
 
-Live at <https://romangurevitch.github.io/agentic-bom/>. Pages only serves
+Live at <https://jasonfungsing.github.io/agentic-bom/>. Pages only serves
 from public repos on the free plan, and needs to be configured with source
 "GitHub Actions" (Settings → Pages) rather than the legacy "deploy from a
 branch" mode for the workflow to publish successfully.
