@@ -17,7 +17,7 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from '../vendor/RoundedBoxGeometry.js';
 
 export const COLORS = {
-  bg: 0x0b0d10,
+  bg: 0x002a41, // Mantel navy: scene background, fog and haze at night
   input: 0x6ee7b7,
   exp: 0x60a5fa,
   life: 0xf59e0b,
@@ -262,7 +262,7 @@ function makeLabel(text, colorCss, scale = 1) {
   canvas.width = w;
   canvas.height = h;
   const c2 = canvas.getContext('2d');
-  c2.fillStyle = 'rgba(13, 17, 22, 0.9)';
+  c2.fillStyle = 'rgba(0, 28, 45, 0.9)';
   roundRect(c2, 1.5, 1.5, w - 3, h - 3, 18);
   c2.fill();
   c2.save();
@@ -271,7 +271,7 @@ function makeLabel(text, colorCss, scale = 1) {
   c2.fillStyle = colorCss;
   c2.fillRect(0, 0, accentW + 1.5, h);
   c2.restore();
-  c2.strokeStyle = '#232a33';
+  c2.strokeStyle = '#1b4b69';
   c2.lineWidth = 3;
   roundRect(c2, 1.5, 1.5, w - 3, h - 3, 18);
   c2.stroke();
@@ -299,7 +299,7 @@ function makePlate(text, colorHex, w = 3.2, h = 0.72) {
   canvas.width = cw;
   canvas.height = ch;
   const c = canvas.getContext('2d');
-  c.fillStyle = 'rgba(10, 13, 17, 0.96)';
+  c.fillStyle = 'rgba(0, 22, 36, 0.96)';
   roundRect(c, 2, 2, cw - 4, ch - 4, 16);
   c.fill();
   c.fillStyle = css(colorHex);
@@ -915,7 +915,7 @@ export function buildWorld(scene) {
   // lights
   const ambient = new THREE.AmbientLight(0xbfd0e0, 0.22);
   scene.add(ambient);
-  const hemi = new THREE.HemisphereLight(0x8fb4d8, 0x1a2129, 0.35);
+  const hemi = new THREE.HemisphereLight(0x81ccea, 0x123a55, 0.35);
   scene.add(hemi);
 
   // Night (default) and daylight looks: only the sky, fog and ambient rig
@@ -933,18 +933,18 @@ export function buildWorld(scene) {
     scene.fog.density = light ? 0.0007 : 0.0032;
     // both themes share the environment; only the palette swaps. Night keeps
     // a faint glow band above the ridges so the horizon still reads.
-    skyU.uTop.value.set(light ? 0x5798dd : 0x04060a);
-    skyU.uHorizon.value.set(light ? 0xeef3f9 : 0x131a25);
+    skyU.uTop.value.set(light ? 0x5798dd : 0x00182a);
+    skyU.uHorizon.value.set(light ? 0xeef3f9 : 0x0e4360);
     skyU.uSunColor.value.set(light ? 0xfff3d2 : 0x000000);
-    hillFarMat.color.set(light ? 0xbfd3e2 : 0x0c1117);
-    hillNearMat.color.set(light ? 0xa3bf94 : 0x0b120d);
-    skirtMat.color.set(light ? 0x74a457 : 0x0a0d0a);
-    hazeMat.color.set(light ? 0xffffff : 0x0b0d10);
+    hillFarMat.color.set(light ? 0xbfd3e2 : 0x06334c);
+    hillNearMat.color.set(light ? 0xa3bf94 : 0x012238);
+    skirtMat.color.set(light ? 0x74a457 : 0x001b2e);
+    hazeMat.color.set(light ? 0xffffff : 0x002a41);
     cloudGroup.visible = light;
     ambient.color.set(light ? 0xffffff : 0xbfd0e0);
     ambient.intensity = light ? 0.5 : 0.22;
-    hemi.color.set(light ? 0xdfeaf5 : 0x8fb4d8);
-    hemi.groundColor.set(light ? 0x97a3b0 : 0x1a2129);
+    hemi.color.set(light ? 0xdfeaf5 : 0x81ccea);
+    hemi.groundColor.set(light ? 0x97a3b0 : 0x123a55);
     hemi.intensity = light ? 0.55 : 0.35;
     // the sun bears down harder than the night key so forms stay crisp
     key.color.set(light ? 0xfff2dd : 0xf2e9dc);
