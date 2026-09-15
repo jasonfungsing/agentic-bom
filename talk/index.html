@@ -128,17 +128,27 @@
     margin-top: 16px;
   }
 
-  #qr {
-    display: none; align-items: center; gap: 14px;
-    margin-top: 12px; padding-top: 12px;
-    border-top: 1px solid var(--line);
+  /* QR box: its own panel at the bottom right, above the progress dots, so a
+     large code never pushes the card up into the scene */
+  #qrbox {
+    right: 26px; bottom: 112px;
+    display: none; gap: 22px;
+    transform-origin: right bottom;
+    transform: scale(var(--hud-scale, 1));
+    padding: 18px 20px 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--panel);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--card-shadow);
   }
-  #qr img {
-    width: 88px; height: 88px; display: block;
-    background: #fff; border-radius: 8px;
+  .qr-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .qr-item img {
+    width: 180px; height: 180px; display: block;
+    background: #fff; border-radius: 10px;
   }
-  .qr-t { font-size: 14px; color: var(--ink-2); }
-  .qr-u { font-size: 13px; color: var(--accent-ink); margin-top: 4px; letter-spacing: 0.02em; }
+  .qr-t { font-size: 15px; color: var(--ink-2); }
+  .qr-u { font-size: 14px; color: var(--accent-ink); letter-spacing: 0.02em; }
   .chip {
     font-family: ui-monospace, Menlo, monospace;
     font-size: 13px; letter-spacing: 0.05em;
@@ -205,9 +215,9 @@
     #kicker { font-size: 16px; }
     #title { font-size: 52px; }
     #bullets { font-size: 22.5px; gap: 8px; }
-    #qr img { width: 108px; height: 108px; }
-    .qr-t { font-size: 15px; }
-    .qr-u { font-size: 14px; }
+    .qr-item img { width: 210px; height: 210px; }
+    .qr-t { font-size: 17px; }
+    .qr-u { font-size: 16px; }
     .chip { font-size: 15px; padding: 6px 14px; }
     #stepnum { font-size: 20px; }
     #notes { font-size: 17px; }
@@ -235,7 +245,7 @@
   body.roam #hint-deck { display: none; }
   body.roam #hint-roam { display: inline; }
   body.roam #card, body.roam #act,
-  body.roam #progress, body.roam #notesbar { display: none; }
+  body.roam #progress, body.roam #notesbar, body.roam #qrbox { display: none; }
 </style>
 </head>
 <body>
@@ -252,14 +262,9 @@
     <h1 id="title"></h1>
     <ul id="bullets"></ul>
     <div id="chips"></div>
-    <div id="qr">
-      <img id="qrimg" src="assets/qr.svg" alt="QR code" />
-      <div>
-        <div class="qr-t" id="qrtitle"></div>
-        <div class="qr-u mono" id="qrurl"></div>
-      </div>
-    </div>
   </div>
+
+  <div class="hud" id="qrbox"></div>
 
   <div class="hud" id="progress">
     <div id="dots"></div>
