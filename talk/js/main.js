@@ -338,6 +338,8 @@ window.addEventListener('keydown', e => {
   if (e.key === 'f' || e.key === 'F') { setRoam(!freeRoam); return; }
   if (e.key === 't' || e.key === 'T') { themeLight = !themeLight; applyTheme(); return; }
   if (e.key === 'p' || e.key === 'P') { toggleFullscreen(); return; }
+  // the key bar is off by default; H shows or hides it in deck and roam modes
+  if (e.key === 'h' || e.key === 'H') { document.body.classList.toggle('showhint'); return; }
   if (freeRoam) {
     // any deck navigation drops back into the talk at the step you left
     if (e.key === 'Escape' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'
