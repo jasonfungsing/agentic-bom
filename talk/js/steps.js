@@ -27,7 +27,7 @@ export const STEPS = [
     notes: [
       'Agent adoption is everywhere, but few of us have a picture of what a full setup looks like, which makes it hard to plan or compare notes.',
       'This talk offers one attempt at that picture, as a parts list; a starting point to argue with, not a prescription.',
-      'The deck stays online; the link is on the closing screen, so every screen can be revisited later.',
+      'The deck stays online at jasonfungsing.github.io/agentic-bom, so every screen can be revisited later.',
     ],
     cam: { pos: [0, -5, 44], target: [0, -4.5, -6] },
   },
@@ -383,10 +383,7 @@ export const STEPS = [
   {
     act: 6, accent: C.outcome, kicker: 'Close',
     title: 'Build your own factory',
-    qr: [
-      { img: 'assets/qr.svg', title: 'The deck & repo', url: 'github.com/jasonfungsing/agentic-bom' },
-      { img: 'assets/qr-linkedin.svg', title: 'Connect on LinkedIn', url: 'linkedin.com/in/jasonfungsing' },
-    ],
+    qr: { img: 'assets/qr-linkedin.svg', title: 'Connect on LinkedIn', url: 'linkedin.com/in/jasonfungsing' },
     bullets: [
       'Adopting tools is not building a factory. The factory is how your org delivers software, rebuilt around agents.',
       'Take the parts list home and hold your org against it: every component gets a deliberate depth, even if that depth is "one file"',
@@ -396,7 +393,7 @@ export const STEPS = [
     notes: [
       'The talk opened on an empty lot with "we are going to build a factory"; the close hands the job over.',
       'Hold your org against the parts list and give each component a deliberate depth, even if that depth is one file; then compose your Meta Workflow on purpose instead of letting it grow by accident.',
-      'The QR codes go to the deck and to LinkedIn; the slide stays up through questions, and disagreement is welcome.',
+      'The QR goes to LinkedIn; the slide stays up through questions, and disagreement is welcome.',
       'Credit: the talk, the factory metaphor and this 3D deck were built by Roman Gurevitch, Principal Software Engineer at Mantel (github.com/romangurevitch/agentic-bom).',
     ],
     cam: { pos: [-10, 10, 46], target: [0, 2, 20] },
