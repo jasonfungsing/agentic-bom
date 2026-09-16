@@ -83,7 +83,9 @@
     background: var(--panel);
   }
 
+  /* the key bar stays hidden while presenting; H shows it */
   #hint {
+    display: none;
     top: 22px; right: 26px;
     font-family: ui-monospace, Menlo, monospace;
     font-size: 12.5px; color: var(--ink-3);
@@ -93,6 +95,7 @@
     background: var(--panel);
   }
   #hint b { color: var(--ink-2); font-weight: 600; }
+  body.showhint #hint { display: block; }
 
   #card {
     left: 26px; bottom: 26px;
@@ -255,8 +258,8 @@
 
   <div class="hud" id="act"></div>
   <div class="hud mono" id="hint">
-    <span id="hint-deck"><b>&larr; &rarr;</b> step &nbsp; <b>drag</b> rotate &nbsp; <b>wasd</b> move &nbsp; <b>scroll</b> zoom &nbsp; <b>-/+</b> hud &nbsp; <b>N</b> notes &nbsp; <b>O</b> orbit &nbsp; <b>F</b> roam &nbsp; <b>T</b> theme &nbsp; <b>P</b> fullscreen &nbsp; <b>1-6</b> act &nbsp; <b>R</b> reset</span>
-    <span id="hint-roam"><b>wasd</b> move &nbsp; <b>drag</b> rotate &nbsp; <b>shift+drag</b> pan &nbsp; <b>scroll</b> zoom &nbsp; <b>O</b> orbit &nbsp; <b>T</b> theme &nbsp; <b>P</b> fullscreen &nbsp; <b>F</b> exit roam</span>
+    <span id="hint-deck"><b>&larr; &rarr;</b> step &nbsp; <b>drag</b> rotate &nbsp; <b>wasd</b> move &nbsp; <b>scroll</b> zoom &nbsp; <b>-/+</b> hud &nbsp; <b>N</b> notes &nbsp; <b>O</b> orbit &nbsp; <b>F</b> roam &nbsp; <b>T</b> theme &nbsp; <b>P</b> fullscreen &nbsp; <b>1-6</b> act &nbsp; <b>R</b> reset &nbsp; <b>H</b> hide</span>
+    <span id="hint-roam"><b>wasd</b> move &nbsp; <b>drag</b> rotate &nbsp; <b>shift+drag</b> pan &nbsp; <b>scroll</b> zoom &nbsp; <b>O</b> orbit &nbsp; <b>T</b> theme &nbsp; <b>P</b> fullscreen &nbsp; <b>F</b> exit roam &nbsp; <b>H</b> hide</span>
   </div>
 
   <div class="hud" id="card">
