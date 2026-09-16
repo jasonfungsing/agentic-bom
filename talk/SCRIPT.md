@@ -271,5 +271,5 @@ speaker-notes strip (`N` key), step-synced.
 - And compose your Meta Workflow on purpose. Decide how your teams’ workflows
   are built instead of letting them grow by accident.
 - Thank you. I am Jason Feng, Principal Software Engineer and Consultant at
-  Mantel. The QR codes on screen go to the deck and to my LinkedIn; scan them
-  and connect. Questions.
+  Mantel. The QR code on screen goes to my LinkedIn; scan it and connect.
+  Questions.
